@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RucaChampaquiDataSet" targetNamespace="http://tempuri.org/RucaChampaquiDataSet.xsd" xmlns:mstns="http://tempuri.org/RucaChampaquiDataSet.xsd" xmlns="http://tempuri.org/RucaChampaquiDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="u348691639_RucaChampaquiConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="u348691639_RucaChampaquiConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BaseDeDatosRuca.Properties.Settings.GlobalReference.Default.u348691639_RucaChampaquiConnectionString" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="u348691639_RucaChampaquiConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="u348691639_RucaChampaquiConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BaseDeDatosRuca.Properties.Settings.GlobalReference.Default.u348691639_RucaChampaquiConnectionString1" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MilicianoAgrupacionTableAdapter" GeneratorDataComponentClassName="MilicianoAgrupacionTableAdapter" Name="MilicianoAgrupacion" UserDataComponentName="MilicianoAgrupacionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="u348691639_RucaChampaquiConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        miliciano.nroDocumento, miliciano.apellido, miliciano.nombre, agrupacion.nombre AS Agrupacion, seccion.nombre AS Seccion
+FROM            miliciano INNER JOIN
+                         agrupacion ON miliciano.agrupacion = agrupacion.tipoAgrupacion AND miliciano.tipoSeccion = agrupacion.tipoSeccion INNER JOIN
+                         seccion ON agrupacion.tipoSeccion = seccion.tipoSeccion</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nroDocumento" DataSetColumn="nroDocumento" />
+              <Mapping SourceColumn="apellido" DataSetColumn="apellido" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="Agrupacion" DataSetColumn="Agrupacion" />
+              <Mapping SourceColumn="Seccion" DataSetColumn="Seccion" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="u348691639_RucaChampaquiConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        miliciano.nroDocumento, miliciano.apellido, miliciano.nombre, agrupacion.nombre AS Agrupacion, seccion.nombre AS Seccion
+FROM            miliciano INNER JOIN
+                         agrupacion ON miliciano.agrupacion = agrupacion.tipoAgrupacion AND miliciano.tipoSeccion = agrupacion.tipoSeccion INNER JOIN
+                         seccion ON agrupacion.tipoSeccion = seccion.tipoSeccion
+WHERE        (miliciano.agrupacion = @agrupacion)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="agrupacion" ColumnName="agrupacion" DataSourceName="u348691639_RucaChampaqui.miliciano" DataTypeServer="int(100)" DbType="Int32" Direction="Input" ParameterName="@agrupacion" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="agrupacion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="u348691639_RucaChampaquiConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy1" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillBy1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        miliciano.nroDocumento, miliciano.apellido, miliciano.nombre, agrupacion.nombre AS Agrupacion, seccion.nombre AS Seccion
+FROM            miliciano INNER JOIN
+                         agrupacion ON miliciano.agrupacion = agrupacion.tipoAgrupacion AND miliciano.tipoSeccion = agrupacion.tipoSeccion INNER JOIN
+                         seccion ON agrupacion.tipoSeccion = seccion.tipoSeccion
+WHERE        (miliciano.agrupacion = @agrupacion)
+ORDER BY miliciano.apellido</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="agrupacion" ColumnName="agrupacion" DataSourceName="u348691639_RucaChampaqui.miliciano" DataTypeServer="int(100)" DbType="Int32" Direction="Input" ParameterName="@agrupacion" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="agrupacion" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MilicianoColegioTableAdapter" GeneratorDataComponentClassName="MilicianoColegioTableAdapter" Name="MilicianoColegio" UserDataComponentName="MilicianoColegioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="u348691639_RucaChampaquiConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        miliciano.apellido, miliciano.nombre, miliciano.nroDocumento, colegio.nombre AS Colegio, seccion.nombre AS Seccion, agrupacion.nombre AS Agrupacion
+FROM            colegio INNER JOIN
+                         miliciano ON colegio.tipoColegio = miliciano.idColegio INNER JOIN
+                         agrupacion ON miliciano.agrupacion = agrupacion.tipoAgrupacion AND miliciano.tipoSeccion = agrupacion.tipoSeccion INNER JOIN
+                         seccion ON agrupacion.tipoSeccion = seccion.tipoSeccion
+WHERE        (miliciano.idColegio = @colegio)
+ORDER BY miliciano.apellido</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="colegio" ColumnName="idColegio" DataSourceName="u348691639_RucaChampaqui.miliciano" DataTypeServer="int(100)" DbType="Int32" Direction="Input" ParameterName="@colegio" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idColegio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="apellido" DataSetColumn="apellido" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="nroDocumento" DataSetColumn="nroDocumento" />
+              <Mapping SourceColumn="Colegio" DataSetColumn="Colegio" />
+              <Mapping SourceColumn="Seccion" DataSetColumn="Seccion" />
+              <Mapping SourceColumn="Agrupacion" DataSetColumn="Agrupacion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MilicianosHobbyTableAdapter" GeneratorDataComponentClassName="MilicianosHobbyTableAdapter" Name="MilicianosHobby" UserDataComponentName="MilicianosHobbyTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="u348691639_RucaChampaquiConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        miliciano.nroDocumento, miliciano.apellido, miliciano.nombre, seccion.nombre AS Seccion, hobby.nombre AS Hobby, agrupacion.nombre AS Agrupacion
+FROM            agrupacion INNER JOIN
+                         miliciano ON agrupacion.tipoAgrupacion = miliciano.agrupacion AND agrupacion.tipoSeccion = miliciano.tipoSeccion INNER JOIN
+                         hobby ON miliciano.idHobby = hobby.tipoHobby INNER JOIN
+                         seccion ON agrupacion.tipoSeccion = seccion.tipoSeccion</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nroDocumento" DataSetColumn="nroDocumento" />
+              <Mapping SourceColumn="apellido" DataSetColumn="apellido" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="Seccion" DataSetColumn="Seccion" />
+              <Mapping SourceColumn="Hobby" DataSetColumn="Hobby" />
+              <Mapping SourceColumn="Agrupacion" DataSetColumn="Agrupacion" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="u348691639_RucaChampaquiConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        miliciano.nroDocumento, miliciano.apellido, miliciano.nombre, seccion.nombre AS Seccion, hobby.nombre AS Hobby, agrupacion.nombre AS Agrupacion
+FROM            agrupacion INNER JOIN
+                         miliciano ON agrupacion.tipoAgrupacion = miliciano.agrupacion AND agrupacion.tipoSeccion = miliciano.tipoSeccion INNER JOIN
+                         hobby ON miliciano.idHobby = hobby.tipoHobby INNER JOIN
+                         seccion ON agrupacion.tipoSeccion = seccion.tipoSeccion
+WHERE        (miliciano.idHobby = @hobby)
+ORDER BY miliciano.apellido</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="hobby" ColumnName="idHobby" DataSourceName="u348691639_RucaChampaqui.miliciano" DataTypeServer="int(100)" DbType="Int32" Direction="Input" ParameterName="@hobby" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idHobby" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MilicianoBarrioTableAdapter" GeneratorDataComponentClassName="MilicianoBarrioTableAdapter" Name="MilicianoBarrio" UserDataComponentName="MilicianoBarrioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="u348691639_RucaChampaquiConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        agrupacion.nombre AS Agrupacion, miliciano.nroDocumento, miliciano.apellido, miliciano.nombre AS Nombre, barrio.nombre AS Barrio, seccion.nombre AS Seccion
+FROM            agrupacion INNER JOIN
+                         miliciano ON agrupacion.tipoAgrupacion = miliciano.agrupacion AND agrupacion.tipoSeccion = miliciano.tipoSeccion INNER JOIN
+                         barrio ON miliciano.idBarrio = barrio.tipoBarrio INNER JOIN
+                         seccion ON agrupacion.tipoSeccion = seccion.tipoSeccion</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Agrupacion" DataSetColumn="Agrupacion" />
+              <Mapping SourceColumn="nroDocumento" DataSetColumn="nroDocumento" />
+              <Mapping SourceColumn="apellido" DataSetColumn="apellido" />
+              <Mapping SourceColumn="Nombre" DataSetColumn="Nombre" />
+              <Mapping SourceColumn="Barrio" DataSetColumn="Barrio" />
+              <Mapping SourceColumn="Seccion" DataSetColumn="Seccion" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="u348691639_RucaChampaquiConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        agrupacion.nombre AS Agrupacion, miliciano.nroDocumento, miliciano.apellido, miliciano.nombre AS Nombre, barrio.nombre AS Barrio, seccion.nombre AS Seccion
+FROM            agrupacion INNER JOIN
+                         miliciano ON agrupacion.tipoAgrupacion = miliciano.agrupacion AND agrupacion.tipoSeccion = miliciano.tipoSeccion INNER JOIN
+                         barrio ON miliciano.idBarrio = barrio.tipoBarrio INNER JOIN
+                         seccion ON agrupacion.tipoSeccion = seccion.tipoSeccion
+WHERE        (miliciano.idBarrio = @barrio)
+ORDER BY miliciano.apellido</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="barrio" ColumnName="idBarrio" DataSourceName="u348691639_RucaChampaqui.miliciano" DataTypeServer="int(100)" DbType="Int32" Direction="Input" ParameterName="@barrio" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idBarrio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="u348691639_RucaChampaquiConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        miliciano.apellido, miliciano.nroDocumento, miliciano.nombre, seccion.nombre AS Seccion, tipoDocumento.nombre AS Tipo, agrupacion.nombre AS Agrupacion
+FROM            agrupacion INNER JOIN
+                         miliciano ON agrupacion.tipoAgrupacion = miliciano.agrupacion AND agrupacion.tipoSeccion = miliciano.tipoSeccion INNER JOIN
+                         seccion ON agrupacion.tipoSeccion = seccion.tipoSeccion INNER JOIN
+                         tipoDocumento ON miliciano.tipoDocumento = tipoDocumento.tipoDocumento</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="apellido" DataSetColumn="apellido" />
+              <Mapping SourceColumn="nroDocumento" DataSetColumn="nroDocumento" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="Seccion" DataSetColumn="Seccion" />
+              <Mapping SourceColumn="Tipo" DataSetColumn="Tipo" />
+              <Mapping SourceColumn="Agrupacion" DataSetColumn="Agrupacion" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RucaChampaquiDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="RucaChampaquiDataSet" msprop:Generator_UserDSName="RucaChampaquiDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MilicianoAgrupacion" msprop:Generator_TableClassName="MilicianoAgrupacionDataTable" msprop:Generator_TableVarName="tableMilicianoAgrupacion" msprop:Generator_RowChangedName="MilicianoAgrupacionRowChanged" msprop:Generator_TablePropName="MilicianoAgrupacion" msprop:Generator_RowDeletingName="MilicianoAgrupacionRowDeleting" msprop:Generator_RowChangingName="MilicianoAgrupacionRowChanging" msprop:Generator_RowEvHandlerName="MilicianoAgrupacionRowChangeEventHandler" msprop:Generator_RowDeletedName="MilicianoAgrupacionRowDeleted" msprop:Generator_RowClassName="MilicianoAgrupacionRow" msprop:Generator_UserTableName="MilicianoAgrupacion" msprop:Generator_RowEvArgName="MilicianoAgrupacionRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nroDocumento" msprop:Generator_ColumnVarNameInTable="columnnroDocumento" msprop:Generator_ColumnPropNameInRow="nroDocumento" msprop:Generator_ColumnPropNameInTable="nroDocumentoColumn" msprop:Generator_UserColumnName="nroDocumento" type="xs:int" />
+              <xs:element name="apellido" msprop:Generator_ColumnVarNameInTable="columnapellido" msprop:Generator_ColumnPropNameInRow="apellido" msprop:Generator_ColumnPropNameInTable="apellidoColumn" msprop:Generator_UserColumnName="apellido">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Agrupacion" msprop:Generator_ColumnVarNameInTable="columnAgrupacion" msprop:Generator_ColumnPropNameInRow="Agrupacion" msprop:Generator_ColumnPropNameInTable="AgrupacionColumn" msprop:Generator_UserColumnName="Agrupacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Seccion" msprop:Generator_ColumnVarNameInTable="columnSeccion" msprop:Generator_ColumnPropNameInRow="Seccion" msprop:Generator_ColumnPropNameInTable="SeccionColumn" msprop:Generator_UserColumnName="Seccion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MilicianoColegio" msprop:Generator_TableClassName="MilicianoColegioDataTable" msprop:Generator_TableVarName="tableMilicianoColegio" msprop:Generator_TablePropName="MilicianoColegio" msprop:Generator_RowDeletingName="MilicianoColegioRowDeleting" msprop:Generator_RowChangingName="MilicianoColegioRowChanging" msprop:Generator_RowEvHandlerName="MilicianoColegioRowChangeEventHandler" msprop:Generator_RowDeletedName="MilicianoColegioRowDeleted" msprop:Generator_UserTableName="MilicianoColegio" msprop:Generator_RowChangedName="MilicianoColegioRowChanged" msprop:Generator_RowEvArgName="MilicianoColegioRowChangeEvent" msprop:Generator_RowClassName="MilicianoColegioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="apellido" msprop:Generator_ColumnVarNameInTable="columnapellido" msprop:Generator_ColumnPropNameInRow="apellido" msprop:Generator_ColumnPropNameInTable="apellidoColumn" msprop:Generator_UserColumnName="apellido">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nroDocumento" msprop:Generator_ColumnVarNameInTable="columnnroDocumento" msprop:Generator_ColumnPropNameInRow="nroDocumento" msprop:Generator_ColumnPropNameInTable="nroDocumentoColumn" msprop:Generator_UserColumnName="nroDocumento" type="xs:int" />
+              <xs:element name="Colegio" msprop:Generator_ColumnVarNameInTable="columnColegio" msprop:Generator_ColumnPropNameInRow="Colegio" msprop:Generator_ColumnPropNameInTable="ColegioColumn" msprop:Generator_UserColumnName="Colegio">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Seccion" msprop:Generator_ColumnVarNameInTable="columnSeccion" msprop:Generator_ColumnPropNameInRow="Seccion" msprop:Generator_ColumnPropNameInTable="SeccionColumn" msprop:Generator_UserColumnName="Seccion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Agrupacion" msprop:Generator_ColumnVarNameInTable="columnAgrupacion" msprop:Generator_ColumnPropNameInRow="Agrupacion" msprop:Generator_ColumnPropNameInTable="AgrupacionColumn" msprop:Generator_UserColumnName="Agrupacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MilicianosHobby" msprop:Generator_TableClassName="MilicianosHobbyDataTable" msprop:Generator_TableVarName="tableMilicianosHobby" msprop:Generator_RowChangedName="MilicianosHobbyRowChanged" msprop:Generator_TablePropName="MilicianosHobby" msprop:Generator_RowDeletingName="MilicianosHobbyRowDeleting" msprop:Generator_RowChangingName="MilicianosHobbyRowChanging" msprop:Generator_RowEvHandlerName="MilicianosHobbyRowChangeEventHandler" msprop:Generator_RowDeletedName="MilicianosHobbyRowDeleted" msprop:Generator_RowClassName="MilicianosHobbyRow" msprop:Generator_UserTableName="MilicianosHobby" msprop:Generator_RowEvArgName="MilicianosHobbyRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nroDocumento" msprop:Generator_ColumnVarNameInTable="columnnroDocumento" msprop:Generator_ColumnPropNameInRow="nroDocumento" msprop:Generator_ColumnPropNameInTable="nroDocumentoColumn" msprop:Generator_UserColumnName="nroDocumento" type="xs:int" />
+              <xs:element name="apellido" msprop:Generator_ColumnVarNameInTable="columnapellido" msprop:Generator_ColumnPropNameInRow="apellido" msprop:Generator_ColumnPropNameInTable="apellidoColumn" msprop:Generator_UserColumnName="apellido">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Seccion" msprop:Generator_ColumnVarNameInTable="columnSeccion" msprop:Generator_ColumnPropNameInRow="Seccion" msprop:Generator_ColumnPropNameInTable="SeccionColumn" msprop:Generator_UserColumnName="Seccion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Hobby" msprop:Generator_ColumnVarNameInTable="columnHobby" msprop:Generator_ColumnPropNameInRow="Hobby" msprop:Generator_ColumnPropNameInTable="HobbyColumn" msprop:Generator_UserColumnName="Hobby">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Agrupacion" msprop:Generator_ColumnVarNameInTable="columnAgrupacion" msprop:Generator_ColumnPropNameInRow="Agrupacion" msprop:Generator_ColumnPropNameInTable="AgrupacionColumn" msprop:Generator_UserColumnName="Agrupacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MilicianoBarrio" msprop:Generator_TableClassName="MilicianoBarrioDataTable" msprop:Generator_TableVarName="tableMilicianoBarrio" msprop:Generator_TablePropName="MilicianoBarrio" msprop:Generator_RowDeletingName="MilicianoBarrioRowDeleting" msprop:Generator_RowChangingName="MilicianoBarrioRowChanging" msprop:Generator_RowEvHandlerName="MilicianoBarrioRowChangeEventHandler" msprop:Generator_RowDeletedName="MilicianoBarrioRowDeleted" msprop:Generator_UserTableName="MilicianoBarrio" msprop:Generator_RowChangedName="MilicianoBarrioRowChanged" msprop:Generator_RowEvArgName="MilicianoBarrioRowChangeEvent" msprop:Generator_RowClassName="MilicianoBarrioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Agrupacion" msprop:Generator_ColumnVarNameInTable="columnAgrupacion" msprop:Generator_ColumnPropNameInRow="Agrupacion" msprop:Generator_ColumnPropNameInTable="AgrupacionColumn" msprop:Generator_UserColumnName="Agrupacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nroDocumento" msprop:Generator_ColumnVarNameInTable="columnnroDocumento" msprop:Generator_ColumnPropNameInRow="nroDocumento" msprop:Generator_ColumnPropNameInTable="nroDocumentoColumn" msprop:Generator_UserColumnName="nroDocumento" type="xs:int" />
+              <xs:element name="apellido" msprop:Generator_ColumnVarNameInTable="columnapellido" msprop:Generator_ColumnPropNameInRow="apellido" msprop:Generator_ColumnPropNameInTable="apellidoColumn" msprop:Generator_UserColumnName="apellido">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nombre" msprop:Generator_ColumnVarNameInTable="columnNombre" msprop:Generator_ColumnPropNameInRow="Nombre" msprop:Generator_ColumnPropNameInTable="NombreColumn" msprop:Generator_UserColumnName="Nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Barrio" msprop:Generator_ColumnVarNameInTable="columnBarrio" msprop:Generator_ColumnPropNameInRow="Barrio" msprop:Generator_ColumnPropNameInTable="BarrioColumn" msprop:Generator_UserColumnName="Barrio">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Seccion" msprop:Generator_ColumnVarNameInTable="columnSeccion" msprop:Generator_ColumnPropNameInRow="Seccion" msprop:Generator_ColumnPropNameInTable="SeccionColumn" msprop:Generator_UserColumnName="Seccion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="apellido" msprop:Generator_ColumnVarNameInTable="columnapellido" msprop:Generator_ColumnPropNameInRow="apellido" msprop:Generator_ColumnPropNameInTable="apellidoColumn" msprop:Generator_UserColumnName="apellido">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nroDocumento" msprop:Generator_ColumnVarNameInTable="columnnroDocumento" msprop:Generator_ColumnPropNameInRow="nroDocumento" msprop:Generator_ColumnPropNameInTable="nroDocumentoColumn" msprop:Generator_UserColumnName="nroDocumento" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Seccion" msprop:Generator_ColumnVarNameInTable="columnSeccion" msprop:Generator_ColumnPropNameInRow="Seccion" msprop:Generator_ColumnPropNameInTable="SeccionColumn" msprop:Generator_UserColumnName="Seccion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tipo" msprop:Generator_ColumnVarNameInTable="columnTipo" msprop:Generator_ColumnPropNameInRow="Tipo" msprop:Generator_ColumnPropNameInTable="TipoColumn" msprop:Generator_UserColumnName="Tipo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Agrupacion" msprop:Generator_ColumnVarNameInTable="columnAgrupacion" msprop:Generator_ColumnPropNameInRow="Agrupacion" msprop:Generator_ColumnPropNameInTable="AgrupacionColumn" msprop:Generator_UserColumnName="Agrupacion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MilicianoAgrupacion" />
+      <xs:field xpath="mstns:nroDocumento" />
+    </xs:unique>
+    <xs:unique name="MilicianoColegio_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MilicianoColegio" />
+      <xs:field xpath="mstns:nroDocumento" />
+    </xs:unique>
+    <xs:unique name="MilicianosHobby_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MilicianosHobby" />
+      <xs:field xpath="mstns:nroDocumento" />
+    </xs:unique>
+    <xs:unique name="MilicianoBarrio_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MilicianoBarrio" />
+      <xs:field xpath="mstns:nroDocumento" />
+    </xs:unique>
+    <xs:unique name="DataTable1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:nroDocumento" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

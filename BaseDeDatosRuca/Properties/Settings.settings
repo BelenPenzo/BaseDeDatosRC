@@ -1,0 +1,22 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="BaseDeDatosRuca.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="u348691639_RucaChampaquiConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;server=sql230.main-hosting.eu;user id=u348691639_BelenPenzo;persistsecurityinfo=True;database=u348691639_RucaChampaqui&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">server=sql230.main-hosting.eu;user id=u348691639_BelenPenzo;persistsecurityinfo=True;database=u348691639_RucaChampaqui</Value>
+    </Setting>
+    <Setting Name="u348691639_RucaChampaquiConnectionString1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;server=sql230.main-hosting.eu;user id=u348691639_BelenPenzo;password=15elamanecer15;persistsecurityinfo=True;database=u348691639_RucaChampaqui&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">server=sql230.main-hosting.eu;user id=u348691639_BelenPenzo;password=15elamanecer15;persistsecurityinfo=True;database=u348691639_RucaChampaqui</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{024A01F6-384E-4095-B6D6-4D04B737C6DF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BaseDeDatosRuca</RootNamespace>
+    <AssemblyName>BaseDeDatosRuca</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.Shell32">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Installer for Windows\Interop.Shell32.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySQL.Utility">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Installer for Windows\MySQL.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="MySQLInstaller.Core">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Installer for Windows\MySQLInstaller.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\AccesosV.cs" />
+    <Compile Include="Clases\AcessosB.cs" />
+    <Compile Include="Clases\AcessosR.cs" />
+    <Compile Include="Forms\Form_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Menu.Designer.cs">
+      <DependentUpon>Form_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_barrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_barrio.Designer.cs">
+      <DependentUpon>Frm_barrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_buscarDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_buscarDocumento.Designer.cs">
+      <DependentUpon>Frm_buscarDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_buscarFichaMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_buscarFichaMedica.Designer.cs">
+      <DependentUpon>Frm_buscarFichaMedica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_buscarPariente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_buscarPariente.Designer.cs">
+      <DependentUpon>Frm_buscarPariente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_colegio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_colegio.Designer.cs">
+      <DependentUpon>Frm_colegio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_compania.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_compania.Designer.cs">
+      <DependentUpon>Frm_compania.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_fichaMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_fichaMedica.Designer.cs">
+      <DependentUpon>Frm_fichaMedica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_hobby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_hobby.Designer.cs">
+      <DependentUpon>Frm_hobby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_login.Designer.cs">
+      <DependentUpon>Frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_miliciano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_miliciano.Designer.cs">
+      <DependentUpon>Frm_miliciano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_modificarFichaMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_modificarFichaMedica.Designer.cs">
+      <DependentUpon>Frm_modificarFichaMedica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_modificarMiliciano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_modificarMiliciano.Designer.cs">
+      <DependentUpon>Frm_modificarMiliciano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_modificarPariente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_modificarPariente.Designer.cs">
+      <DependentUpon>Frm_modificarPariente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_obraSocial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_obraSocial.Designer.cs">
+      <DependentUpon>Frm_obraSocial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_ocupacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_ocupacion.Designer.cs">
+      <DependentUpon>Frm_ocupacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_opcionesAdministracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_opcionesAdministracion.Designer.cs">
+      <DependentUpon>Frm_opcionesAdministracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_opcionesBuscarMiliciano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_opcionesBuscarMiliciano.Designer.cs">
+      <DependentUpon>Frm_opcionesBuscarMiliciano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_opcionesFichaMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_opcionesFichaMedica.Designer.cs">
+      <DependentUpon>Frm_opcionesFichaMedica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_pagoCuota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_pagoCuota.Designer.cs">
+      <DependentUpon>Frm_pagoCuota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Frm_registrarPariente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Frm_registrarPariente.Designer.cs">
+      <DependentUpon>Frm_registrarPariente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FrmR_agrupacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmR_agrupacion.Designer.cs">
+      <DependentUpon>FrmR_agrupacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FrmR_Barrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmR_Barrio.Designer.cs">
+      <DependentUpon>FrmR_Barrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\FrmR_Colegio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\FrmR_Colegio.Designer.cs">
+      <DependentUpon>FrmR_Colegio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Frm_RHobby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Frm_RHobby.Designer.cs">
+      <DependentUpon>Frm_RHobby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\RucaChampaquiDataSet.cs">
+      <DependentUpon>RucaChampaquiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\RucaChampaquiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RucaChampaquiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Forms\Form_Menu.resx">
+      <DependentUpon>Form_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_barrio.resx">
+      <DependentUpon>Frm_barrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_buscarDocumento.resx">
+      <DependentUpon>Frm_buscarDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_buscarFichaMedica.resx">
+      <DependentUpon>Frm_buscarFichaMedica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_buscarPariente.resx">
+      <DependentUpon>Frm_buscarPariente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_colegio.resx">
+      <DependentUpon>Frm_colegio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_compania.resx">
+      <DependentUpon>Frm_compania.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_fichaMedica.resx">
+      <DependentUpon>Frm_fichaMedica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_hobby.resx">
+      <DependentUpon>Frm_hobby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_login.resx">
+      <DependentUpon>Frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_miliciano.resx">
+      <DependentUpon>Frm_miliciano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_modificarFichaMedica.resx">
+      <DependentUpon>Frm_modificarFichaMedica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_modificarMiliciano.resx">
+      <DependentUpon>Frm_modificarMiliciano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_modificarPariente.resx">
+      <DependentUpon>Frm_modificarPariente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_obraSocial.resx">
+      <DependentUpon>Frm_obraSocial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_ocupacion.resx">
+      <DependentUpon>Frm_ocupacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_opcionesAdministracion.resx">
+      <DependentUpon>Frm_opcionesAdministracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_opcionesBuscarMiliciano.resx">
+      <DependentUpon>Frm_opcionesBuscarMiliciano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_opcionesFichaMedica.resx">
+      <DependentUpon>Frm_opcionesFichaMedica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_pagoCuota.resx">
+      <DependentUpon>Frm_pagoCuota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Frm_registrarPariente.resx">
+      <DependentUpon>Frm_registrarPariente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmR_agrupacion.resx">
+      <DependentUpon>FrmR_agrupacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmR_Barrio.resx">
+      <DependentUpon>FrmR_Barrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\FrmR_Colegio.resx">
+      <DependentUpon>FrmR_Colegio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Frm_RHobby.resx">
+      <DependentUpon>Frm_RHobby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Report1.rdlc" />
+    <EmbeddedResource Include="Reportes\R_Barrio.rdlc" />
+    <EmbeddedResource Include="Reportes\R_Colegio.rdlc" />
+    <EmbeddedResource Include="Reportes\R_hobby.rdlc" />
+    <None Include="packages.config" />
+    <None Include="Reportes\RucaChampaquiDataSet.xsc">
+      <DependentUpon>RucaChampaquiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\RucaChampaquiDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RucaChampaquiDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\RucaChampaquiDataSet.xss">
+      <DependentUpon>RucaChampaquiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\civitas3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\civitas2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Administracion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Administracion1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Administracion2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Administracion3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Administracion4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agregar un subtítulo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agregar un subtítulo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Busquedas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agregar un subtítulo %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Carga de Barrio.png" />
+    <None Include="Resources\Carga de Barrio %281%29.png" />
+    <None Include="Resources\Carga de Barrio %282%29.png" />
+    <None Include="Resources\Carga de Barrio %283%29.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

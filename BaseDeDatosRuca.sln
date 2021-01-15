@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseDeDatosRuca", "BaseDeDatosRuca\BaseDeDatosRuca.csproj", "{024A01F6-384E-4095-B6D6-4D04B737C6DF}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Base De Datos Ruca", "Base De Datos Ruca\Base De Datos Ruca.vdproj", "{9221D232-0631-49AD-9A23-AEB8CD53FCDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{024A01F6-384E-4095-B6D6-4D04B737C6DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{024A01F6-384E-4095-B6D6-4D04B737C6DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{024A01F6-384E-4095-B6D6-4D04B737C6DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{024A01F6-384E-4095-B6D6-4D04B737C6DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9221D232-0631-49AD-9A23-AEB8CD53FCDA}.Debug|Any CPU.ActiveCfg = Debug
+		{9221D232-0631-49AD-9A23-AEB8CD53FCDA}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6BDF37A9-0E58-4DE1-AA64-867D5A39D485}
+	EndGlobalSection
+EndGlobal
